@@ -5,12 +5,16 @@ plugins {
 
 android {
     namespace = "com.example.ppapb_pertemuan10_recyclerview"
-    compileSdk = 33
+    compileSdk = 34
+
+    buildFeatures{
+        viewBinding=true
+    }
 
     defaultConfig {
         applicationId = "com.example.ppapb_pertemuan10_recyclerview"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
