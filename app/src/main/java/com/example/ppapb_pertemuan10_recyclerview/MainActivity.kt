@@ -10,12 +10,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        var adapterStudent = StudentAdapter()
+        var adapterStudent = StudentAdapter(generateStudentData())
         with(binding){
             rvStudent.apply {
                 adapter = adapterStudent
                 layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this@MainActivity)
             }
         }
+    }
+    fun generateStudentData(): List<Student> {
+        return listOf(
+            Student("Rizki", "Coding"),
+            Student("Ardi", "Game"),
+            Student("Aziz", "Mbego"),
+            Student("Rasyid", "Ngokop"),
+            Student("Hanif", "Ngaji")
+        )
     }
 }
